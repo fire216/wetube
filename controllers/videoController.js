@@ -1,11 +1,17 @@
-export const home = (req, res) => 
-    res.render("home", {pageTitle: "Home"});
+import { videos } from "../db";
 
-export const search = (req, res) => 
-    res.render("search", { pageTitle: "Search" });
+export const home = (req, res) => {
+    res.render("home", { pageTitle: "Home", videos });
+};
+    
 
-export const videos = (req, res) => 
-    res.render("videos", { pageTitle: "Videos" });
+export const search = (req, res) => {
+    //const searchingBy = req.query.params와 같다
+    const {
+        query: { term: searchingBy }
+    } = req;
+    res.render("search", { pageTitle: "Search", searchingBy });
+};
 
 export const upload = (req, res) => 
     res.render("upload", { pageTitle: "Upload" });
