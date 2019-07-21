@@ -1,4 +1,4 @@
-//유일하게 독점적으로 URL을 다루는 방법
+// 유일하게 독점적으로 URL을 다루는 방법
 import express from "express";
 import routes from "../routes";
 import { home, 
