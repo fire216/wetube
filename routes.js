@@ -1,4 +1,4 @@
-//하나의 진실의 source를 쓰기 위해...
+// 하나의 진실의 source를 쓰기 위해...
 
 // Global
 const HOME = "/";
@@ -17,48 +17,48 @@ const CHANGE_PASSWORD = "/change-password";
 const VIDEOS = "/videos";
 const UPLOAD = "/upload";
 const VIDEO_DETAIL = "/:id";
-const EDIT_VIDEO = "/:id/edit"; //ex. videos/1/edit , video/2/edit ...
+const EDIT_VIDEO = "/:id/edit"; // ex. videos/1/edit , video/2/edit ...
 const DELETE_VIDEO = "/:id/delete";
 
 const routes = {
-    home: HOME,
-    join: JOIN,
-    login: LOGIN,
-    logout: LOGOUT,
-    search: SEARCH,
-    users: USERS,
-    userDetail: (id) => {
-        if(id){
-            return `/users/${id}`;
-        }else {
-            return USER_DETAIL;
-        }
-    },
-    editProfile: EDIT_PROFILE,
-    changePassword: CHANGE_PASSWORD,
-    videos: VIDEOS,
-    upload: UPLOAD,
-    videoDetail: (id) => {
-        if(id){
-            return `/videos/${id}`;
-        }else {
-            return VIDEO_DETAIL;
-        }
-    },
-    editVideo: (id) => {
-     if(id){
-        return `/videos/${id}/edit`
-    }else{
-        return EDIT_VIDEO;
-    }
-},
-    deleteVideo: (id) => {
-      if(id) {
-          return `/videos/${id}/delete`
+  home: HOME,
+  join: JOIN,
+  login: LOGIN,
+  logout: LOGOUT,
+  search: SEARCH,
+  users: USERS,
+  userDetail: id => {
+    if (id) {
+      return `/users/${id}`;
     } else {
-        return DELETE_VIDEO;
+      return USER_DETAIL;
     }
-}
+  },
+  editProfile: EDIT_PROFILE,
+  changePassword: CHANGE_PASSWORD,
+  videos: VIDEOS,
+  upload: UPLOAD,
+  videoDetail: id => {
+    if (id) {
+      return `/videos/${id}`;
+    } else {
+      return VIDEO_DETAIL;
+    }
+  },
+  editVideo: id => {
+    if (id) {
+      return `/videos/${id}/edit`;
+    } else {
+      return EDIT_VIDEO;
+    }
+  },
+  deleteVideo: id => {
+    if (id) {
+      return `/videos/${id}/delete`;
+    } else {
+      return DELETE_VIDEO;
+    }
+  }
 };
 
 export default routes;
