@@ -2,8 +2,8 @@ extends layouts/main
 
 block content
     .form-container
-        form(action=`/videos${routes.upload}`, method="post", enctype="multipart/form-data")
-            div.fileUploade
+        form(action=routes.upload, method="post", enctype="multipart/form-data")
+            div.fileUpload
                 label(for="file") Vdieo File
                 input(type="file", id="file", name="videoFile", required=true, accept="video/*")
             input(tupe="text", placeholder="Title", name="title", required=true)

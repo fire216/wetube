@@ -5,7 +5,8 @@ dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useCreateIndex: true
 });
 
 const db = mongoose.connection;
